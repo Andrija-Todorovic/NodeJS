@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/stylesheets/<%= style %>">
+
+<% if (message != '') { %>
+    <div class="alert alert-success text-center"><h4><%= message %></h4></div>
+<% } %>
+
+              
+<div class="container">
+    <div>
+        <div class="login-page">
+                <p class="heading">Register</p>
+            <form action="" method="POST">  
+                </b>
+                <label for="name">Full Name :</label>
+                <input type="text" name="name" id="name" class="text" placeholder="Enter Name...">
+    
+                </b>
+        
+                <label for="email">E-mail  :</label>
+                <input type="email" name="email" id="email" class="text" placeholder="Enter E-mail...">
+        
+                </b>
+        
+                <label for="password">Password :</label> 
+                <input type="password" name="password" id="password" class="text" placeholder="Enter Password...">
+  
+                </b>
+
+                <label for="passwordConfirm">Confirm Password :</label>
+                <input type="password" required name="passwordConfirm" id="passwordConfirm" class="text" placeholder="Confirm Password...">
+                
+               
+
+
+            <input type="submit" value="Register" class="btn">  
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/stylesheets/<%= style %>">
+<% if (message != '') {%>
+  <div class="alert alert-success text-center"><h4><%= message %></h4></div>
+  <% } %>
+<div class="container">
+  <div class="login-page">
+      <div>
+            <p class="heading">Login</p>
+              
+              <form action="/auth/login" method="POST">
+                    <label for="email">E-mail  :</label>
+                    <input type="email" name="email" id="email" class="text" placeholder="Enter E-mail...">
+                  
+                  
+                  
+                    <label for="password">Password :</label>
+                    <input type="password" name="password" id="password" class="text"  placeholder="Enter Password...">
+                
+                  
+
+                    <input type="submit" value="Login" class="btn">  
+                    <a href="/views/login/login.ejs" ></a>
+              </form>
+          
+      </div>
+  </div>
+</div>
+
+

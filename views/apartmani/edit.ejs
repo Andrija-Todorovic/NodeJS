@@ -1,0 +1,52 @@
+<% layout('layouts/boilerplate')%>
+<div class="container">
+   <form action="/apartmani/edit" method="POST" enctype="multipart/form-data">
+       <% apartman.forEach(items => { %>
+               <div class="form-group">
+               <label for="name"><h3> First name :</h3></label>
+               <input required type="text" name="name" value="<%= items.name %>" id="name"  class="form-control">
+               </div>
+
+               <div class="form-group">
+               <label for="lname"><h3>Last name :</h3></label>
+               <input required type="text" name="lname" value="<%= items.lname %>" id="lname"  class="form-control">
+               </div>
+
+               <div class="form-group">
+               <label for="street"><h3>Street :</h3></label>
+               <input  type="text" name="street" value="<%= items.street %>" id="street" class="form-control">
+               </div>
+
+               <div class="form-group">
+               <label for="phone"><h3>Phone :</h3></label>
+               <input  type="number" name="phone" value="<%= items.phone %>" id="phone" class="form-control">
+               </div>
+
+               <div class="form-group">
+               <label for="date"><h3>Date :</h3></label>
+               <input  type="date" name="date" value="<%= items.date %>" id="date" class="form-control">
+               </div>
+
+               <div class="form-group">
+               <label for="square" ><h3>Square footage :</h3></label>
+               <input  name="square" value="<%= items.square %>" id="square" class="form-control"> </input>
+               </div>
+
+               <div class="form-group">
+               <label for="email"><h3>Email :</h3></label>
+               <textarea  name="email" value="<%= items.email %>" id="email" class="form-control"></textarea>
+               </div>
+                           <h1></h1>
+               <div class="form-group">
+                  <label for="image" >Upload image</label>
+                  <input  type="file" name="image" value="<%= items.image %>" id="image" class="form-control-file">
+               </div>
+
+
+                  <a href="/" class="btn btn-secondary">Cancel</a>
+                  <h1></h1>
+                  <button  class="btn btn-primary">Submit</button>
+         <% }); %> 
+   </form>
+   
+</div>

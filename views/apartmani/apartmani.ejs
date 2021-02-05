@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplate')%>
+<link rel="stylesheet" href="/stylesheets/apartmani.css">
+ <!-- Apartments -->
+ 
+
+        <div class="sub">
+            <h1>Apartments</h1>
+       </div>
+    
+  <div class="container ">
+    <div class="row">
+    <p class="container"><h2>Add product</h2></p>
+    <a href="apartmani/novi_post" class="add"><h1><i class="fas fa-plus-square"></i></h1></a>
+    <form>
+      <% include('novi_post') %>
+    </form>
+    </div>
+  </div>  
+
+
+<div class="container">
+  <div class="row">
+    <% apartman.forEach(items => { %>
+      <div class="col-md-6 mt-3">
+        <div class="card">
+          <img src="/images/image/<%= items.image %>" >
+        <div class="container">
+          <h2></h2>
+          <p class="title"><h1> Apartment's </h1></p>
+          <p><h3> <%= items.ime %> </h3></p>
+          <p><h3><%= items.prezime %></h3></p>
+          <p><%= items.email %></p>
+          <p><%= items.datum %></p>
+          <p><%= items.ulica %></p>
+          <p><%= items.kvadratura %>square footage</p>
+        
+        <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="text">1 star</label>
+  </div>
+
+  
+
+          <div>
+            <a href="apartmani/edit/<%=items.id%>"><button type="menu" class="edit"><i class="far fa-edit"></i></button></a>
+            <a href="apartmani/delete/<%=items.id %>"><button type="button" class="delete"><i class="fas fa-trash"></i></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <% }); %> 
+    
+  </div>
+</div>
